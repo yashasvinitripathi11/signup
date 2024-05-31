@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>notes</title>
+    </head>
+    <style>
+
+    #im{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color:lightblue;
+    opacity: 1;
+    border-radius: 8px 8px 8px  ;
+    box-shadow: 9px 1px 9px ;} 
+    #div06{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        
+    }  
+    #div03{
+        border: 2px solid black;
+        width:25rem;
+        background-color: darkcyan;
+    } 
+    #bdy{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    </style>
+    <body id="bdy">
+    
+        <div id="im">
+            <div id="div02">
+                    <h1 style="color: cadetblue;font-size: 2rem;">Welcome Yashasvini</h1>
+                </div>
+                <div id="linkss">
+                    <a href="dashboard" style="text-decoration: none;color:cadetblue;font-size: 2rem;margin-right: 2rem;margin-top: 2rem;" >Home</a>
+                    <a href="" style="text-decoration: none;color:cadetblue;font-size: 2rem;">Logout </a>
+
+                </div>
+            </div><br><br>
+            <div id="div06">
+
+                {% for note in notes %}
+
+                <div id="div03">
+                    <h1 style>{{ note.id }}: {{ note.title }}</h1>
+                    <hr>
+                    <center>
+                        <h1>Description: {{ note.desc }}</h1>
+                            
+                    
+                         <p style> {{ note.desc}} </p>
+                         <a href="delete_note/{{note.id}}">Delete note</a>
+                         <a href="edit_note/{{note.id}}">Edit note</a>
+                        </center>     
+                            
+                          
+                </div>
+
+
+                {% endfor %}
+               
+            </div>
+            
+
+    </body>
+</html>

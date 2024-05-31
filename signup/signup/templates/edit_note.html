@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>edit</title>
+    </head>
+    <style>
+         #im{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color:lightblue;
+    opacity: 1;
+    border-radius: 8px 8px 8px  ;
+    box-shadow: 9px}   
+    form{
+        margin-right: 4rem;
+        border:1px solid black;
+        width:20rem;
+        margin-right: auto;
+        margin-left: auto;
+        height: 17rem;
+        background-color: lavender;
+        
+    }
+    </style>
+    <body id="mm">
+        
+    
+            <div id="im">
+                <div id="div02">
+                        <h1 style="color: cadetblue;font-size: 2rem;">Welcome Yashasvini</h1>
+                    </div>
+                    <div id="linkss">
+                        <a href="notes" style="text-decoration: none;color:cadetblue;font-size: 2rem;margin-right: 2rem;margin-top: 2rem;" >notes</a>
+                        <a href="" style="text-decoration: none;color:cadetblue;font-size: 2rem;">Logout </a>
+    
+                    </div>
+                </div><br><br>
+                <form method="POST">
+                    {% csrf_token %}
+                    <h1 style="color: black;text-align: center;">Form</h1><br>
+                    <label for="user">Title:</label> <input type="text" name="title" id="user"><br><br>
+                    <label for="user">Description:</label>
+                       <input type="text" name="desc" id="user"><br><br>
+                       
+        
+                     <center><button type="submit">update</button> </center>           
+                </form>
+                    
+    </body>
+</html>
